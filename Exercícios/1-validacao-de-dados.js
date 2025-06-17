@@ -1,6 +1,7 @@
 // Crie a função ehDataValida(dia, mes, ano) que retorne true se os valores 
 // formarem uma data real (meses de 28–31 dias, ano bissexto para fevereiro) 
 // e false caso contrário.
+
 const prompt = require("prompt-sync")();
 
 
@@ -23,7 +24,7 @@ function ehDataValida(dia, mes, ano) {
     if (mes < 1 || mes > 12 || ano <= 1 || isNaN(ano)) {
         return false;
     }
-    
+
     let diasDoMesAtual;
 
     if (mes === 2 && ehBissexto(ano)) {
